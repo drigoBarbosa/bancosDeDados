@@ -29,7 +29,7 @@ do negócio. A Constraint CHECK é usada para limitar o intervalo de valores que
 - Criação de Tabela: 
 
 **CREATE TABLE** nome_tabela
-( nome_coluna tipo de dado | constraint_tabela ),
+( nome_coluna tipo de dado | constraint_tabela ), <br>
 ( nome_coluna tipo de dado | constraint_tabela )
 
 - Alteração de Tabela: 
@@ -38,40 +38,39 @@ Após a criação da estrutura de uma tabela, pode-se incluir (ADD), excluir (DR
 
 **Acrescentar campos em uma tabela**
 
-ALTER TABLE CLIENTE
+ALTER TABLE CLIENTE  <br>
 ADD( IE_FISICA_JURIDICA CHAR(1))
 
 **Alterando obrigatoriedade de atributos em uma tabela.**
 
-ALTER TABLE CLIENTE
+ALTER TABLE CLIENTE  <br>
 MODIFY (nm_cliente not null);
 
 **Modificando o tipo de atributos em uma tabela.**
 
-ALTER TABLE CLIENTE
+ALTER TABLE CLIENTE  <br>
  MODIFY (DS_ENDERECO NUMBER(3));
 
 **Modificando o tamanho dos atributos em uma tabela.**
 
-ALTER TABLE CLIENTE
+ALTER TABLE CLIENTE  <br>
 MODIFY (NR_CEP VARCHAR2(12));
 
 **Acrescentar restrições a uma tabela.**
 
 ALTER TABLE CLIENTE
- ADD(CONSTRAINT CLIENTE_IE_FISICA_JURIDICA_CK
+ ADD(CONSTRAINT CLIENTE_IE_FISICA_JURIDICA_CK  <br>
  CHECK(IE_FISICA_JURIDICA IN(‘F’,’J’)));
 
 **Desabilitar uma restrição de uma tabela.**
 
-ALTER TABLE CLIENTE
+ALTER TABLE CLIENTE  <br>
 DISABLE CONSTRAINT CLIENTE_IE_FISICA_JURIDICA_CK;
 
 **Excluir uma restrição de uma tabela.**
 
-ALTER TABLE CLIENTE
+ALTER TABLE CLIENTE  <br>
 DROP CONSTRAINT CLIENTE_IE_FISICA_JURIDICA_CK
-13
 
 **Exclusão de Tabela**
 
